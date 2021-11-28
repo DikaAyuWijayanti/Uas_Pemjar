@@ -28,6 +28,7 @@ public class HalamanUtama extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         buttonPlay = new javax.swing.JButton();
         buttonCredits = new javax.swing.JButton();
+        btnexit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,8 +53,8 @@ public class HalamanUtama extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uas/3.jpg"))); // NOI18N
 
-        buttonPlay.setBackground(new java.awt.Color(0, 204, 255));
         buttonPlay.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        buttonPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uas/icon (119).png"))); // NOI18N
         buttonPlay.setText("Play");
         buttonPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,12 +62,21 @@ public class HalamanUtama extends javax.swing.JFrame {
             }
         });
 
-        buttonCredits.setBackground(new java.awt.Color(0, 204, 255));
         buttonCredits.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        buttonCredits.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uas/icon (29).png"))); // NOI18N
         buttonCredits.setText("Credits");
         buttonCredits.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCreditsActionPerformed(evt);
+            }
+        });
+
+        btnexit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uas/logout.png"))); // NOI18N
+        btnexit.setText("Exit");
+        btnexit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnexitActionPerformed(evt);
             }
         });
 
@@ -77,11 +87,13 @@ public class HalamanUtama extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(buttonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addComponent(buttonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
                 .addComponent(buttonCredits)
-                .addGap(184, 184, 184))
+                .addGap(46, 46, 46)
+                .addComponent(btnexit, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,14 +101,12 @@ public class HalamanUtama extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(buttonPlay, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonCredits, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonCredits, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(buttonPlay, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(btnexit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,13 +114,18 @@ public class HalamanUtama extends javax.swing.JFrame {
 
     private void buttonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPlayActionPerformed
         // TODO add your handling code here:
-         new pilihLevel().setVisible(true);
+         new halamannama();
     }//GEN-LAST:event_buttonPlayActionPerformed
 
     private void buttonCreditsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreditsActionPerformed
         // TODO add your handling code here:
         new level().setVisible(true);
     }//GEN-LAST:event_buttonCreditsActionPerformed
+
+    private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
+        // TODO add your handling code here:
+         System.exit(0);
+    }//GEN-LAST:event_btnexitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,6 +163,7 @@ public class HalamanUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnexit;
     private javax.swing.JButton buttonCredits;
     private javax.swing.JButton buttonPlay;
     private javax.swing.JLabel jLabel1;
